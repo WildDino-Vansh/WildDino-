@@ -1,0 +1,164 @@
+<html>
+<head>
+    <title>Div Replacement with Movement</title>
+    <style>
+        .partt {
+            position: relative;
+            width: 100%;
+            height: 10vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(128, 128, 128, 0.262);
+        }
+
+        .div-element {
+            font-size: 18px;
+            position: absolute;
+            /* width: 300px;
+            height: 150px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            transition: transform 1s;
+        }
+        .div-element a{
+            font-size: 15px;
+            font-weight: 900;
+            text-decoration: underline;
+        }
+        .initial-div {
+            text-align: center;
+            transform: translate(0);
+        }
+        .replacement-div {
+            text-align: center;
+            transform: translate(1200px);
+        
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="partt" class="partt">
+        <div id="initialDiv" class="div-element initial-div">
+            <p>New Styles on Sale: Up to 40% Off <br>
+            <a>Shop All Our New Markdowns</a></p>
+        </div>
+        <div id="replacementDiv" class="div-element replacement-div">
+            <p>Move, Shop, Customise & Celebrate With Us. <br>
+                No matter what you feel like doing today, It’s better as a Member. <br>
+                
+                <a>Join Us</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Function to replace the initial div with the replacement div using a slide effect
+        function replaceDivWithSlide() {
+            const initialDiv = document.getElementById('initialDiv');
+            const replacementDiv = document.getElementById('replacementDiv');
+
+            // Check the current state and toggle the positions
+            if (initialDiv.style.transform === 'translateX(0px)') {
+                initialDiv.style.transform = 'translateX(-1200px)';
+                replacementDiv.style.transform = 'translateX(0)';
+            } else {
+                initialDiv.style.transform = 'translateX(0)';
+                replacementDiv.style.transform = 'translateX(1200px)';
+            }
+        }
+
+        // Set an interval to replace the div every 6 seconds
+        setInterval(replaceDivWithSlide, 4000);
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .xyz{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        height: 400px;
+        width: 100vw;
+        background: url("background.jpg");
+        background-size: cover;
+        box-shadow: 5px 7px 150px 5px inset rgba(255, 213, 0, 0.848);
+    }
+    .boxx{
+        margin-top: 50px;
+        position: relative;
+        width: 300px;
+        height: 400px;
+        transform-style: preserve-3d;
+        animation: move 25s linear infinite;
+    }
+    @keyframes move{
+        0%{
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        100%{
+            transform: perspective(1000px) rotateY(360deg);
+        }
+    }
+    .boxx span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i)*45deg)) translateZ(290px);
+        -webkit-box-reflect: below -120px linear-gradient(transparent, transparent, #0004);
+    }
+    .boxx span img{
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 60%;
+        height: 70%;
+        object-fit: cover;
+
+    }
+</style>
+<body>
+    <center></center>
+    <div class="get">
+        <div class="xyz">
+            <div class="boxx">
+                <span style="--i:1;"> <img src="girls.jpg" alt=""></span>
+                <span style="--i:2;"> <img src="boys3.jpg" alt=""></span>
+                <span style="--i:3;"> <img src="girls2.jpg" alt=""></span>
+                <span style="--i:4;"> <img src="c:\Users\Ashok\Desktop\WildDino\boys.jpeg" alt=""></span>
+                <span style="--i:5;"> <img src="girls6.jpg" alt=""></span>
+                <span style="--i:6;"> <img src="shorts.jpg" alt=""></span>
+                <span style="--i:7;"> <img src="girls5.jpg" alt=""></span>
+                <span style="--i:8;"> <img src="c:\Users\Ashok\Desktop\WildDino\men.webp" alt=""></span>   
+            </div>
+        </div>
+    </div>
+</center>
+</body>
+</html> -->

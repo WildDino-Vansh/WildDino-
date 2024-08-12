@@ -1,0 +1,90 @@
+<html>
+    <body>
+       <center>
+        <table>
+            <tr>
+               <td colspan="4"> <input type="text" id="a"></td>
+            </tr>
+    
+    
+            <tr>
+                <td><button onclick="f(9)">9</button></td>
+                <td><button onclick="f(8)">8</button></td>
+                <td><button onclick="f(7)">7</button></td>
+                <td><button onclick="f('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="f(6)">6</button></td>
+                <td><button onclick="f(5)">5</button></td>
+                <td><button onclick="f(4)">4</button></td>
+                <td><button onclick="f('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="f(3)">3</button></td>
+                <td><button onclick="f(2)">2</button></td>
+                <td><button onclick="f(1)">1</button></td>
+                <td><button onclick="f('*')">*</button></td>
+            </tr>
+    
+            <tr>
+                <td><button onclick="f('0')">0</button></td>
+                <td><button onclick="f('.')">.</button></td>
+                <td><button onclick="f('00')">00</button></td>
+                <td><button onclick="f('/')">/</button></td>
+            </tr>
+            <tr>
+                <td colspan="2" ><button class="sp" onclick="solve()">=</button></td>
+                <td colspan="2" ><button class="sp" onclick="clr()">CLEAR</button></td>
+            </tr>
+           </table> 
+    
+       </center>
+
+       <style>
+        body{
+            background-color: #a6a6a63e;
+        }
+        table{
+            margin-top: 100px;
+        }
+        input{
+            width: 355px;
+            height:55px;
+            font-size: 30px;
+        }
+        button
+        {
+            width: 85px;
+            height: 55px;
+            font-size: 30px;
+        }
+        .sp
+        {
+            width: 175px;
+            background-color: gold;
+            border: none;
+        }
+       </style>
+
+
+<script>
+    function f(t)
+    {
+        document.getElementById("a").value += t;
+    }
+    
+    function solve()
+    {
+        let e = document.getElementById("a").value;
+
+        document.getElementById("a").value = eval(e);
+    }
+
+
+    function clr()
+    {
+        document.getElementById("a").value = "";
+    }
+</script>
+    </body>
+</html>

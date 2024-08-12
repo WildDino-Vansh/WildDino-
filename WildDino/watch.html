@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 70px;
+            background-color: black;
+            color: white;
+        }
+        #a{
+         text-shadow: 1px 3px 10px;
+        }
+    </style>
+</head>
+<body>
+    <center><p id="a">data</p></center>
+    <script>
+     tt();
+     function tt()
+     {
+     let t= new Date();
+     let h=t.getHours();
+     let m=t.getMinutes();
+     let s=t.getSeconds();
+     let d=t.getDay();
+   
+     setTimeout(tt,1000)
+
+     if(d==1)
+     {
+        document.getElementById("a").innerHTML= "MON"+"-"+h+":"+m+":"+s;
+     }
+     else if(d==2)
+     {
+        document.getElementById("a").innerHTML= "TUE"+"-"+h+":"+m+":"+s;
+     }
+     else if(d==3)
+     {
+        document.getElementById("a").innerHTML= "WED"+"-"+h+":"+m+":"+s;
+     }
+     else if(d==4)
+     {
+        document.getElementById("a").innerHTML= "THUR"+"-"+h+":"+m+":"+s;
+     }
+     else if(d==5)
+     {
+        document.getElementById("a").innerHTML= "FRI"+"-"+h+":"+m+":"+s;
+     }
+     else if(d==6)
+     {
+        document.getElementById("a").innerHTML= "SAT"+"-"+h+":"+m+":"+s;
+     }else if(d==7)
+     {
+        document.getElementById("a").innerHTML= "SUN"+"-"+h+":"+m+":"+s;
+     }
+    }
+    </script>
+</body>
+</html>

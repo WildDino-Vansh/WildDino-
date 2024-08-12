@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif; 
+      font-weight: 700;
+    }
+    body{
+        background-color: rgba(196, 229, 231, 0.282);
+    }
+
+
+    .bob{
+      position: sticky;
+      padding: 3vh 4vw;
+      background-color: rgb(36, 36, 36);
+      display: flex;
+      justify-content: space-between;
+    }
+    .bob ul{
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    .bob ul li a{
+    color: white;
+      text-decoration: none;
+      font-size: 3.4vh;
+      padding: 2vh 2vw;
+    }
+    .bob ul li a:hover{
+      color: black;
+      background-color: #e2e2e2a7;
+      border-bottom: 3px solid white;
+    }
+    .bob img{
+      height: 7vh;
+      margin: -10px 0px;
+    }
+
+
+    .container {
+            max-width: 600px;
+            margin: 70px 400px;
+            padding: 20px;
+            background-color: #dcf4f025;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(15, 81, 103);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type="submit"] {
+            background-color: #2fa933;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #1a8b20;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="bob">
+    <img src="logo image2.jpg" style="z-index: 2;"><img src="logo images1.jpg" style="margin-left: -514px; z-index: 1;"> 
+    <ul>
+      <li><a href="portfolio.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+ 
+  
+</body>
+</html>

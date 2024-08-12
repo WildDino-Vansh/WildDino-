@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: white;
+      font-family: sans-serif; 
+      font-weight: 700;
+    }
+
+
+.lack {
+  margin-top: 5vh;
+  color: #e5e5e5;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.lack p {
+  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+}
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.80rem;
+  display:inline-block;
+}
+.animation div:first-child {
+  animation: text-animation 7s infinite;
+}
+.first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+}
+@keyframes text-animation {
+  0% {margin-top: 0.1rem;}
+  10% {margin-top: 0.1rem;}
+  20% {margin-top: -5rem;}
+  30% {margin-top: -5rem;}
+  40% {margin-top: -10.30rem;}
+  /* 50% {margin-top: -11rem;} */
+  60% {margin-top: -10.30rem;}
+  70% {margin-top: -5rem;}
+  80% {margin-top: -5rem;}
+  90% {margin-top: 0.1rem;}
+  100% {margin-top: 0.1rem;}
+}
+
+
+    .bob{
+      position: sticky;
+      padding: 3vh 4vw;
+      background-color: rgb(33, 33, 33);
+      display: flex;
+      justify-content: space-between;
+    }
+    .bob ul{
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    .bob ul li a{
+      text-decoration: none;
+      font-size: 3.4vh;
+      padding: 2vh 2vw;
+    }
+    .bob ul li a:hover{
+      color: black;
+      background-color: #e2e2e2a7;
+      border-bottom: 3px solid white;
+    }
+    .bob img{
+      height: 7vh;
+      margin: -10px 0px;
+    }
+
+
+    .container{
+      display: flex;
+      gap: 7vw;
+      /* justify-content: space-between; */
+    }
+    .box1 img{
+      height: 88.7vh;
+      width: 39vw;
+    }
+    .box2{
+      margin-top: 12vh;
+    }
+    .a{
+      font-size: 6.8rem;
+    }
+    .line::after{
+      content: '';
+      display: inline-block; 
+      width: 41vw;
+      height: .5vh;
+      background-color: #139696;
+      margin-left: 1.8vw;
+      vertical-align: middle;
+    }
+    .a1{
+      margin-top: -2vh;
+    }
+  </style>
+</head>
+<body style="background-color: black;">
+  <div class="bob">
+    <img src="logo image2.jpg" style="z-index: 2;"><img src="logo images1.jpg" style="margin-left: -514px; z-index: 1;">
+    <ul>
+      <li><a href="portfolio.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="box1">
+      <img src="men.webp" alt="">
+    </div>
+
+    <div class="box2">
+      <div class="a">
+        <p>My<a class="line"></a></p>
+        <p class="a1">Portfolio</p>
+      </div>
+      <div class="b"></div>
+
+      <div class="lack">
+        <p>Hello 👋 I'm</p>
+        <section class="animation">
+          <div class="first"><div>Vansh Kumawat</div></div>
+          <div class="second"><div>I CAN HELP YOU</div></div>
+          <div class="third"><div>I AM WEB DESIGNER</div></div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
