@@ -1,0 +1,242 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Replacement with Animation</title>
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 100px;
+        }
+
+        .div-element {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: opacity 1s;
+        }
+
+        .initial-div {
+            background-color: blue;
+        }
+
+        .replacement-div {
+            background-color: red;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div id="initialDiv" class="div-element initial-div">Initial Div</div>
+        <div id="replacementDiv" class="div-element replacement-div">Replacement Div</div>
+    </div>
+
+    <script>
+        // Function to replace the initial div with the replacement div using animation
+        function replaceDivWithAnimation() {
+            const initialDiv = document.getElementById('initialDiv');
+            const replacementDiv = document.getElementById('replacementDiv');
+
+            // Fade out the initial div
+            initialDiv.style.opacity = '0';
+
+            // Wait for the fade-out transition to complete
+            setTimeout(() => {
+                initialDiv.style.display = 'none'; // Hide the initial div after fade-out
+                replacementDiv.style.opacity = '1'; // Fade in the replacement div
+            }, 1000); // Match the transition duration
+        }
+
+        // Set a timeout to replace the div after 3 seconds
+        setTimeout(replaceDivWithAnimation, 3000);
+    </script>
+</body>
+
+</html> -->
+
+<html>
+<head>
+    <title>Div Replacement with Movement</title>
+    <style>
+        .partt {
+            position: relative;
+            width: 100%;
+            height: 10%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(128, 128, 128, 0.262);
+        }
+
+        .div-element {
+            font-size: 18px;
+            position: absolute;
+            /* width: 300px;
+            height: 150px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            transition: all 1s;
+        }
+        .div-element a{
+            font-size: 15px;
+            font-weight: 900;
+            text-decoration: underline;
+        }
+        .initial-div {
+            text-align: center;
+            transform: translate(0);
+        }
+        .replacement-div {
+            text-align: center;
+            transform: translate(1000px);
+            
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="partt" class="partt">
+        <div id="initialDiv" class="div-element initial-div">
+            <p>New Styles on Sale: Up to 40% Off <br>
+            <a>Shop All Our New Markdowns</a></p>
+        </div>
+        <div id="replacementDiv" class="div-element replacement-div">
+            <p>Move, Shop, Customise & Celebrate With Us. <br>
+                No matter what you feel like doing today, It’s better as a Member. <br>
+                
+                <a>Join Us</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Function to replace the initial div with the replacement div using a slide effect
+        function replaceDivWithSlide() {
+            const initialDiv = document.getElementById('initialDiv');
+            const replacementDiv = document.getElementById('replacementDiv');
+
+            // Slide the initial div out to the left
+            // initialDiv.style.transform = 'translateX(-1000px)';
+
+            initialDiv.style.transform = 'translateX(-1000px)';
+
+            // Slide the replacement div in from the right
+            replacementDiv.style.transform = 'translateX(0)';
+        }
+
+        // Set a timeout to replace the div after 3 seconds
+        setTimeout(replaceDivWithSlide, 2000);
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        height: 350px;
+        width: 100%;
+        background-color: bisque;
+    }
+
+    .box ul li {
+        background-color: aqua;
+    }
+    .box1 {
+        height: 350px;
+        width: 90%;
+        background-color: black;
+        color: white;
+        margin-top: -100px;
+    }
+</style>
+<body>
+    </ul> <br><br><br>
+    <div class="box">
+        <ul>
+            <li><span>Home</span></li>
+        </ul>
+    </div>
+
+
+
+
+    <div class="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui odio nostrum fugit et! Iste minima
+        sed et quam adipisci, culpa voluptatem beatae maiores necessitatibus magni hic exercitationem odio provident
+        tempora at amet harum fuga ea placeat? Quae ips.</div>
+</body>
+
+<script>
+    var a = document.querySelector(".box ul li span")
+    var b = document.querySelector(".box1")
+
+    a.addEventListener("mouseenter", function () {
+        b.style.marginTop = "0"
+    })
+
+    a.addEventListener("mouseleave", function () {
+        b.style.marginTop = "-100px"
+    })
+
+</script>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        padding: 14.5px;
+        height: 30px;
+    }
+    .box{
+        background-color: aqua;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+    }
+    .box:hover{
+        background-color: rgb(8, 0, 255);
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+    }
+    .c{
+        
+    }
+</style>
+<body>
+    <center style="margin-top: 100px;">
+            <div class="box">
+                <img src="instagram.png" alt="" >
+            </div>
+    </center>
+</body>
+</html> -->
